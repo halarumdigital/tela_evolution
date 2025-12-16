@@ -50,7 +50,7 @@
 }
 
 :root {
-  /* Dark Mode Default for this Tech App */
+  /* Dark Mode Default - KOGNA Theme (Orange/Red Gradient) */
   --background: 222 47% 11%;
   --foreground: 210 40% 98%;
 
@@ -60,7 +60,7 @@
   --popover: 222 47% 11%;
   --popover-foreground: 210 40% 98%;
 
-  --primary: 160 84% 39%; /* Emerald Green for WhatsApp */
+  --primary: 24 95% 53%; /* KOGNA Orange */
   --primary-foreground: 210 40% 98%;
 
   --secondary: 217 33% 17%;
@@ -69,7 +69,7 @@
   --muted: 217 33% 17%;
   --muted-foreground: 215 20% 65%;
 
-  --accent: 217 33% 17%;
+  --accent: 12 90% 55%; /* KOGNA Red/Coral */
   --accent-foreground: 210 40% 98%;
 
   --destructive: 0 62% 30%;
@@ -77,12 +77,12 @@
 
   --border: 217 33% 17%;
   --input: 217 33% 17%;
-  --ring: 160 84% 39%;
+  --ring: 24 95% 53%;
 
   --radius: 0.75rem;
 
-  --chart-1: 220 70% 50%;
-  --chart-2: 160 60% 45%;
+  --chart-1: 24 95% 53%;
+  --chart-2: 12 90% 55%;
   --chart-3: 30 80% 55%;
   --chart-4: 280 65% 60%;
   --chart-5: 340 75% 55%;

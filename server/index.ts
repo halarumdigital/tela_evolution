@@ -2,6 +2,26 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+import { readFileSync } from "fs";
+import { resolve } from "path";
+
+// Carregar variáveis de ambiente do arquivo .env
+try {
+  const envPath = resolve(process.cwd(), ".env");
+  const envContent = readFileSync(envPath, "utf-8");
+  envContent.split("\n").forEach((line) => {
+    const [key, ...valueParts] = line.split("=");
+    if (key && valueParts.length > 0) {
+      const value = valueParts.join("=").trim();
+      if (!process.env[key.trim()]) {
+        process.env[key.trim()] = value;
+      }
+    }
+  });
+  console.log("Variáveis de ambiente carregadas do .env");
+} catch (err) {
+  console.warn("Arquivo .env não encontrado ou erro ao carregar");
+}
 
 const app = express();
 const httpServer = createServer(app);
